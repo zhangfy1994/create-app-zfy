@@ -1,3 +1,13 @@
+
+
+### [1.1.1](https://github.com/zhangfy1994/create-app-zfy/compare/1.1.0...1.1.1) (2022-09-12)
+
+
+### 📚文档
+
+* 添加使用说明 ([a469764](https://github.com/zhangfy1994/create-app-zfy/commit/a469764054b186b7a20d152f3d1d6c009e6f152d))
+* 添加文档 ([bbeecfa](https://github.com/zhangfy1994/create-app-zfy/commit/bbeecfa9da5f88cad0522ffa0283f6aed585044a))
+
 # 1.1.0 (2022-09-12)
 
 ### Features

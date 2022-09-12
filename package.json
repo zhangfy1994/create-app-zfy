@@ -1,6 +1,6 @@
 {
   "name": "create-app-zfy",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "自动生成前端项目cli",
   "type": "module",
   "bin": "bin/index.js",
