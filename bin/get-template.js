@@ -1,6 +1,7 @@
 import inquirer from "inquirer";
 import util from "node:util";
 import path from "node:path";
+import fs from "fs-extra";
 import download from "download-git-repo";
 import { getZhuRongRepo, getTagsByRepo } from "./api.js";
 import { loading } from "./help.js";
@@ -41,10 +42,14 @@ export async function getTemplate(projectName) {
   ]);
 
   const downloadUrl = `zhurong-cli/${repo}${tag ? "#" + tag : ""}`;
-  await loading(
-    "下载模版中...",
-    downloadGitRepo,
-    downloadUrl,
-    path.join(process.cwd(), projectName)
-  );
+  const template = path.join(process.cwd(), projectName);
+  await loading("下载模版中...", downloadGitRepo, downloadUrl, template);
+
+  try {
+    const templateJson = await fs.readJSON(path.join(template, "package.json"));
+    templateJson.name = projectName;
+    await fs.writeJson(path.join(template, "package.json"), templateJson, {
+      spaces: 2,
+    });
+  } catch (error) {}
 }

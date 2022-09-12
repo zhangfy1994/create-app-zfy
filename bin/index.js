@@ -17,8 +17,8 @@ program
   .command("create <project-name>")
   .description("create new project")
   .option("-f, --force", "overwrite target directory if it exists")
-  .action((projectName, cmd) => {
-    create(projectName, cmd);
+  .action((projectName, options) => {
+    create(projectName, options);
   });
 
 // config 命令
