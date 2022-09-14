@@ -1,5 +1,12 @@
 
 
+## [1.2.0](https://github.com/zhangfy1994/create-app-zfy/compare/1.1.1...1.2.0) (2022-09-14)
+
+
+### ✨新功能
+
+* 添加ts 和 esbuild ([27cb1a1](https://github.com/zhangfy1994/create-app-zfy/commit/27cb1a1f4e74b4527e39dd239a6592a557d74ffe))
+
 ### [1.1.1](https://github.com/zhangfy1994/create-app-zfy/compare/1.1.0...1.1.1) (2022-09-12)
 
 
