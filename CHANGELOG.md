@@ -1,5 +1,7 @@
 
 
+## [2.0.0](https://github.com/zhangfy1994/create-app-zfy/compare/1.2.0...2.0.0) (2022-09-14)
+
 ## [1.2.0](https://github.com/zhangfy1994/create-app-zfy/compare/1.1.1...1.2.0) (2022-09-14)
 
 
