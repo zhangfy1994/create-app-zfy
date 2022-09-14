@@ -5,7 +5,7 @@
   "type": "module",
   "bin": "index.cjs",
   "scripts": {
-    "release": "release-it",
+    "release": "release",
     "build": "node ./script/build.js"
   },
   "keywords": [],
