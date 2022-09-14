@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "types": ["node"],
+    "allowSyntheticDefaultImports": true,
+    "target": "esnext", // 指定 ECMAScript 版本
+    "allowJs": true, // 允许编译 JavaScript 文件
+    "strict": true, // 启用所有严格类型检查选项
+    "forceConsistentCasingInFileNames": true, // 不允许对同一个文件使用不一致格式的引用
+    "module": "esnext", // 指定模块代码生成
+    "moduleResolution": "node", // 使用 Node.js 风格解析模块
+    "resolveJsonModule": true, // 允许使用 .json 扩展名导入的模块
+    "baseUrl": "./",
+    "outDir": "dist",
+    "paths": {
+      "@": ["./src"],
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "src/**/*", // *** TypeScript文件应该进行类型检查 ***
+    "package.json",
+    "types"
+  ],
+  "exclude": ["node_modules"] // *** 不进行类型检查的文件 ***}
+}

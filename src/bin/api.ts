@@ -15,6 +15,6 @@ export async function getZhuRongRepo() {
  * @param {string} repo 模板名称
  * @returns Promise 版本信息
  */
-export async function getTagsByRepo(repo) {
+export async function getTagsByRepo(repo: string) {
   return axios.get(`https://api.github.com/repos/zhurong-cli/${repo}/tags`);
 }

@@ -3,19 +3,19 @@ import util from "node:util";
 import path from "node:path";
 import fs from "fs-extra";
 import download from "download-git-repo";
-import { getZhuRongRepo, getTagsByRepo } from "./api.js";
-import { loading } from "./help.js";
+import { getZhuRongRepo, getTagsByRepo } from "./api";
+import { loading } from "./help";
 
 // 下载模版
-export async function downloadGitRepo(...args) {
+export async function downloadGitRepo(...args: any[]) {
   const downloadPromise = util.promisify(download);
   return downloadPromise(...args);
 }
 
-export async function getTemplate(projectName) {
+export async function getTemplate(projectName: string) {
   // 获取模版
   const repoList = await loading("查询模版中...", getZhuRongRepo);
-  const repos = repoList.map((repo) => repo.name);
+  const repos = repoList.map((repo: any) => repo.name);
 
   // 用户选择模版
   const { repo } = await inquirer.prompt([
@@ -29,7 +29,7 @@ export async function getTemplate(projectName) {
 
   // 获取模版tags
   const repoTags = await loading("查询tags中...", getTagsByRepo, repo);
-  const tags = repoTags.map((tag) => tag.name);
+  const tags = repoTags.map((tag: any) => tag.name);
 
   // 用户选择模版tag
   const { tag } = await inquirer.prompt([

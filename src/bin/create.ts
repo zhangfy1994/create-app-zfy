@@ -1,9 +1,9 @@
 import path from "node:path";
 import inquirer from "inquirer";
 import fs from "fs-extra";
-import { getTemplate } from "./get-template.js";
+import { getTemplate } from "./get-template";
 
-async function create(projectName, option) {
+async function create(projectName: string, option: any) {
   // 当前工作目录
   const cwd = process.cwd();
   const targetDirectory = path.join(cwd, projectName);

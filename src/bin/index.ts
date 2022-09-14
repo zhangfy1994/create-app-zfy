@@ -1,16 +1,14 @@
 #! /usr/bin/env node
 import { program } from "commander";
 import chalk from "chalk";
-import require from "../lib/require.js";
-import create from "./create.js";
+import { version } from "../../package.json";
+// import require from "../lib/require.js";
+import create from "./create";
 
-const packageInfo = require("../package.json");
+// const packageInfo = require("../../package.json");
 
 // 配置名称 版本
-program
-  .name("create-app")
-  .usage(`<command> [option]`)
-  .version(packageInfo.version);
+program.name("create-app").usage(`<command> [option]`).version(version);
 
 // create 命令
 program

@@ -1,16 +1,20 @@
 import ora from "ora";
 
 // sleep
-export async function sleep(time) {
-  return new Promise((resolve, reject) => {
+export async function sleep(time: number) {
+  return new Promise((resolve) => {
     setTimeout(() => {
-      resolve();
+      resolve(true);
     }, time);
   });
 }
 
 // loading
-export async function loading(text, fn, ...args) {
+export async function loading(
+  text: string,
+  fn: any,
+  ...args: any[]
+): Promise<any> {
   const spinner = ora({ text, color: "green" });
   spinner.start();
   try {

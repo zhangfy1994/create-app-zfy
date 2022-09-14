@@ -3,9 +3,10 @@
   "version": "1.1.1",
   "description": "自动生成前端项目cli",
   "type": "module",
-  "bin": "bin/index.js",
+  "bin": "index.cjs",
   "scripts": {
-    "release": "release-it"
+    "release": "release-it",
+    "build": "node ./script/build.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,11 @@
   },
   "devDependencies": {
     "@release-it/conventional-changelog": "^5.1.0",
-    "release-it": "^15.4.1"
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^9.0.1",
+    "@types/node": "^18.7.18",
+    "esbuild": "^0.15.7",
+    "release-it": "^15.4.1",
+    "typescript": "^4.8.3"
   }
 }
